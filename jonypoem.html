@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jony Jony Poem</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align:center;
+        }
+
+        .container{
+            color:#222;
+        }
+
+        /* Hide checkbox */
+        #toggle{
+            display:none;
+        }
+
+        h1{
+            cursor:pointer;
+            margin-bottom:20px;
+            transition:0.3s;
+        }
+
+        h1:hover{
+            color:white;
+            transform:scale(1.1);
+        }
+
+        .poem{
+            max-height:0;
+            overflow:hidden;
+            transition:0.5s ease;
+            font-size:18px;
+        }
+
+        /* When title clicked (checkbox checked) */
+        #toggle:checked ~ .poem{
+            max-height:300px;
+        }
+
+        .poem p{
+            margin:8px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Hidden checkbox -->
+        <input type="checkbox" id="toggle">
+
+        <!-- Clicking this title checks the checkbox -->
+        <label for="toggle">
+            <h1>Jony Jony</h1>
+        </label>
+
+        <div class="poem">
+            <p>Jony Jony, Yes Papa?</p>
+            <p>Eating sugar? No Papa!</p>
+            <p>Telling lies? No Papa!</p>
+            <p>Open your mouth. Ha ha ha!</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
